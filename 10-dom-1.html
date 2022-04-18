@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+    <div class="container d-flex border justify-content-evenly align-items-center">
+        <div id="kutu1" class="kutu bg-danger d-sm-none">A</div>
+        <div id="kutu2" class="kutu bg-warning d-none d-sm-block">B</div>
+        <div class="kutu bg-success d-none d-md-block d-lg-none">C</div>
+        <div class="kutu bg-secondary d-md-none d-lg-block">D</div>
+        <div class="kutu bg-info d-none  d-md-block">
+                <p class="kutu">TEST</p>
+            </div>
+    </div>
+
+    <h1 class="name">Ali Gel</h1>
+    <p class="mesaj">...</p>
+    <script>
+        let cont = document.querySelector(".container");
+        
+        cont = document.querySelector("#kutu2");
+        cont = document.querySelector(".container div:nth-child(2)");
+        cont = document.querySelector("div.bg-info .kutu");
+
+        console.log(cont.innerText);
+
+        cont.innerText = "<b>Merhaba Dünya</b>";
+        cont.innerHTML = "<em>Merhaba Dünya</em>";
+
+
+        cont = document.querySelectorAll(".d-none");
+        console.log(cont);
+
+        let isim =document.querySelector(".name").innerText;
+        console.log(isim);
+        document.querySelector(".mesaj").innerHTML =`merhaba <b>${isim}<b>`;
+    </script>
+</body>
+</html>

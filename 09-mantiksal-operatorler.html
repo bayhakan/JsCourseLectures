@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let x=50;
+        let y=40;
+        let z=10;
+
+        console.log(x==50);   /* true */ /* iki = de type kontrolüne bakmaz ture yada false döndürür*/
+        console.log(x=="50"); /* true */
+        console.log(x===50);  /* true */
+        console.log(x==="50"); /* false */ /*HEm type hem değer kontolü yapar-  number ile string karşılaştırılıyor ve false döner*/   
+
+        console.log(x>y); /*true*/
+        console.log(x>"30"); /*true*/
+        console.log(x>"130"); /*false*/
+        console.log(x>"asdasd"); /*false*/
+        console.log(x<"asdasd"); /*false*/
+
+        console.log (""|| 0 || null || undefined);
+        //colsole.log ("dfsf" && undefined && true && 12n);
+
+        let mail ="";
+        if(!mail){
+            alert("Epostanızı giriniz");
+        }
+
+        let s1 =10;
+        s1 = s1+3;
+        let s2 =s1 +3;
+
+        let counter = 345;
+        counter =counter+1;
+
+        console.log(document);
+
+        
+    </script>
+</body>
+</html>
