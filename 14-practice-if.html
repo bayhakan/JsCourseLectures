@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="txtFiyat">
+    <button id="btnHesapla" onclick="hesapla()">Hesapla</button>
+    <button id="btnHesapla" onclick="hesapla2()">Hesapla2</button>
+
+
+    <div id="lblSonuc"></div>
+    <div id="lblSonuc2"></div>
+
+
+
+
+
+
+
+    <script>
+            function hesapla(){
+                let fiyat = document.querySelector("#txtFiyat").value;
+                if (fiyat>500){
+                    fiyat = fiyat-(fiyat*10/100)
+                }
+                document.querySelector("#lblSonuc").innerHTML = fiyat;
+            }
+            
+            function hesapla2(){
+                let fiyat2 = document.querySelector("#txtFiyat").value;
+                if (fiyat2>500){
+                    fiyat2 = fiyat2-(fiyat2*10/100)
+                }
+                fiyat2 = fiyat2-(fiyat2*5/100)
+                
+                document.querySelector("#lblSonuc2").innerHTML = fiyat2;
+            }
+    </script>
+
+
+</body>
+</html>
