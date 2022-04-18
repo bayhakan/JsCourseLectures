@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+  <style>
+    .switcher{
+  background-color: black;
+  color: white;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border:0;
+  font-size: 1.5rem;
+}
+
+.switcher::after{
+  font: var(--fa-font-solid);
+  content: "\f186";
+}
+
+.darkmode{
+  background-color: black;
+  color: white;
+}
+
+.darkmode .switcher{
+  background-color: white;
+  color: black;
+}
+
+.darkmode .switcher::after{
+  content: "\f185";
+}
+  </style>
+</head>
+
+<body>           
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+    numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+    optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+    obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+    nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+    tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
+    quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos 
+    sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
+    recusandae alias error harum maxime adipisci amet laborum. Perspiciatis 
+    minima nesciunt dolorem! Officiis iure rerum voluptates a cumque velit 
+    quibusdam sed amet tempora. Sit laborum ab, eius fugit doloribus tenetur 
+    fugiat, temporibus enim commodi iusto libero magni deleniti quod quam 
+    consequuntur! Commodi minima excepturi repudiandae velit hic maxime
+    doloremque. Quaerat provident commodi consectetur veniam similique ad 
+    earum omnis ipsum saepe, voluptas, hic voluptates pariatur est explicabo 
+    fugiat, dolorum eligendi quam cupiditate excepturi mollitia maiores labore 
+    suscipit quas? Nulla, placeat. Voluptatem quaerat non architecto ab laudantium
+    modi minima sunt esse temporibus sint culpa, recusandae aliquam numquam 
+    totam ratione voluptas quod exercitationem fuga. Possimus quis earum veniam 
+    quasi aliquam eligendi, placeat qui corporis!</p>
+    
+    <button class="switcher" onclick="changeMode()"></button>
+    
+    
+  <script>
+    let mode = "light";
+
+function changeMode(){
+  if(mode=="light"){
+    document.querySelector("body").classList.add('darkmode');
+    mode = "dark";
+  }
+  else{
+    document.querySelector("body").classList.remove('darkmode');
+    mode = "light";
+  }
+  
+}
+  </script>
+
+</body>
+
+</html>
