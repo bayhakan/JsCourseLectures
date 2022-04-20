@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="txtSayi1">
+    <input type="number" name="" id="txtSayi2">
+    <button onclick="hesapla()">Hesapla</button>
+    <h1 id="sonuc"></h1>
+    <script>
+        function hesapla(){
+            let sayi1 = Number(document.querySelector("#txtSayi1").value);
+            let sayi2 = Number(document.querySelector("#txtSayi2").value);
+            let toplam = 0;
+            let sayac = 0;
+            do{
+                toplam += sayi1;
+                sayi1++;
+                sayac++;
+            }
+            while(toplam<2000 && sayi1<sayi2)
+            document.querySelector("#sonuc").innerText = `Toplam: ${toplam} - ${sayac}`;
+        }
+        
+        
+    </script>
+    
+</body>
+</html>
