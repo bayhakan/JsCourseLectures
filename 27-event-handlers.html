@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="baslik">Merhaba</h1>
+    <button id="btnClick1">Tıkla1</button>
+    <button id="btnClick2">Tıkla2</button>
+    <button id="btnClick3">Tıkla3</button>
+    <button id="btnClick4">Tıkla4</button>
+    <script>
+        const sayHello = function(){
+            alert("Hello");
+        }
+        document.querySelector("#baslik").onclick = sayHello;
+        document.querySelector("#btnClick1").onclick = function(){
+            alert("Tıklandı");
+        }
+      
+        document.querySelector("#btnClick2").onclick = () => {
+            alert("Tıklandı");
+        }
+        document.querySelector("#btnClick3").addEventListener('click', sayHello);
+        document.querySelector("#btnClick4").addEventListener('click', (e)=>{
+            console.log(e);
+            alert("Tıklandı");
+        });
+        
+    </script>
+</body>
+</html>

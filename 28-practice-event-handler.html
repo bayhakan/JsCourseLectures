@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="txtNot1" placeholder="1.Notu giriniz">
+    <input type="number" name="" id="txtNot2" placeholder="2.Notu giriniz">
+    <button id="btnHesapla">Hesapla</button>
+    <h3>Yıl sonu notu: <span id="sonuc"></span></h3>
+    <script>
+        document.querySelector("#btnHesapla").addEventListener("click", ()=>{
+            let not1 = document.querySelector("#txtNot1");
+            let not2 = document.querySelector("#txtNot2");
+            if(!not1.value || isNaN(not1.value) || not1.value<0 || not1.value>100){
+                alert("1.Not için geçerli bir değer giriniz");
+                not1.focus();
+                not1.value = "";
+                return;
+            }
+            if(!not2.value || isNaN(not2.value) || not2.value<0 || not2.value>100){
+                alert("2.Not için geçerli bir değer giriniz");
+                not2.focus();
+                not2.value = "";
+                return;
+            }
+            not1 = Number(not1.value);
+            not2 = Number(not2.value);
+            const ortalama = (not1 + not2) /2;
+            let harfNot = "";
+            switch(true){
+                case ortalama >= 90:
+                    harfNot = "A";
+                    break;
+                case ortalama >=80:
+                    harfNot = "B";
+                    break;
+                case ortalama >=70:
+                    harfNot = "C";
+                    break;
+                case ortalama >=50:
+                    harfNot = "D";
+                    break;
+                default:
+                    harfNot = "F";
+            }
+            
+            document.querySelector("#sonuc").innerHTML = harfNot;
+        });
+    </script>
+</body>
+</html>
