@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+​
+    <script>
+        function yasHesapla1(){
+            console.log(`Benim yaşım ${2022 - 1990}`);
+        }
+​
+        function yasHesapla2(dt){
+            console.log(`Benim yaşım ${2022 - dt}`);
+        }
+​
+        function yasHesapla3(dt){
+            let tarih = new Date();
+            console.log(tarih);
+            
+            let yas = 2022 - dt;
+            return yas;
+        }
+​
+        yasHesapla1();
+​
+        yasHesapla2(1995);
+        yasHesapla2(2000);
+​
+​
+        let abc = yasHesapla3(2005);
+        alert(abc);
+​
+​
+    </script>
+</body>
+</html> 
