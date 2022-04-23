@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        const dizi = [12,45,568,1,35,567,12,124];
+
+        let enBuyuk = dizi[0];
+
+        for(var i=0; i<dizi.length; i++){
+            //console.log(`${i}.elamanın değeri = ${dizi[i]}`);
+
+            if(dizi[i] > enBuyuk){
+                enBuyuk = dizi[i];
+            }
+        }
+
+        console.log(enBuyuk);
+    </script>
+</body>
+</html>

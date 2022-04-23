@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="baslik"></select>
+
+
+    <script>
+        const meyveler = ["Elma","Armut","muz","Kivi"];
+        console.log(meyveler);
+        meyveler.pop(); // Son elemanı siler.kivi silindi
+        console.log(meyveler); 
+        meyveler.push("Ananas"); // Sona Ananas eklendi
+        console.log(meyveler);
+        meyveler.shift(); // ilk elemanı siler. Elma silindi
+        console.log(meyveler);
+        meyveler.unshift("Çilek"); // ilk indexe ekleme yapar. Çilek en başa eklendi.
+        console.log(meyveler);
+        meyveler.reverse(); // sırayı tam tersine çevirir. Sondan başa sıralanır.
+        console.log(meyveler);
+        meyveler.sort( (a,b) => a.localeCompare(b, 'tr')).reverse(); // sıralama yapar.a-z. İçinde ç geçtiği için bu yöntemi kullandık default ing olduğu için tr harfler geçmezse içinde sort yeterlidir. reverse ise tersen sıralar.
+        console.log(meyveler);
+        meyveler.splice(2,1); // 2. indexten itibaren bir elemanı sil, (2,2) yazsaydık indexten sonra iki eleman sil olurdu.
+        //meyveler.splice(2,1,"Ayva"); Sildikten sonra ayvayı ekliyor. ikinci parametreyi 0 yaparsak silmeden ekler  
+        console.log(meyveler);
+
+        document.querySelector("#baslik").innerHTML = meyveler.join("<br>");
+
+    </script>
+</body>
+</html>

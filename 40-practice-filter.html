@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txtHarf">
+    <ul id="liste">
+    </ul>
+    
+    <script>
+        const bireyler = ["Mustafa", "Murat", "Ahmet", "mustafa", "Ayşe", "Canan"];
+        const filtrele = (harf) => {
+            let strBireyler = "";
+            let yeniDizi = bireyler;
+            if(harf){
+                yeniDizi = yeniDizi.filter( 
+                    birey => birey.toLocaleLowerCase().startsWith(harf.toLocaleLowerCase()) 
+                );
+            }
+            yeniDizi.forEach(birey=> {
+                strBireyler+=`<li>${birey}</li>`;
+            });
+            document.querySelector("#liste").innerHTML=strBireyler;
+        }
+        filtrele();
+        document.querySelector("#txtHarf").addEventListener('input', (e)=> {
+            console.log(e.target.value);
+            filtrele(e.target.value);
+        });
+    </script>
+</body>
+</html>

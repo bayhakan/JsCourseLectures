@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btnHesapla">Hesapla</button>
+    <div id="lblOrtNufus"></div>
+    <ul id="lstSehirler">
+        
+    </ul>
+    <script>
+      const dizi = [
+        {
+          sehir: "İstanbul",
+          nufus: 20000000,
+        },
+        {
+          sehir: "İzmir",
+          nufus: 10000000,
+        },
+        {
+          sehir: "Ankara",
+          nufus: 15000000,
+        },
+        {
+          sehir: "Sivas",
+          nufus: 3000000,
+        },
+      ];
+        document.querySelector("#btnHesapla").addEventListener('click', ()=>{
+            let ortalamaNufus = 0;
+            dizi.forEach( (item)=>{
+                ortalamaNufus += item.nufus;
+            });
+            ortalamaNufus /= dizi.length;
+            let listItems = "";
+            dizi.forEach( (item)=>{
+                listItems += `<li>${item.sehir} ${item.nufus - ortalamaNufus}</li>`;
+            });
+            document.querySelector('#lblOrtNufus').innerHTML = ortalamaNufus;
+            document.querySelector('#lstSehirler').innerHTML = listItems;
+        });
+    </script>
+  </body>
+</html>

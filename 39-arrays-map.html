@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const euro = 16.68;
+        const dolar = 14.1;
+        const tlFiyatlar = [100, 150, 100, 50, 80];
+
+        const usdPrices = tlFiyatlar.map ( price => (price / dolar).toFixed(2)); // toFixed virgülden sonra kaç hanenin görüneceğini belirtmemize yarar
+        const eurPrices = tlFiyatlar.map ( price => (price / euro).toFixed(2));
+        console.log(usdPrices);
+        console.log(eurPrices);
+</script>
+</body>
+</html>

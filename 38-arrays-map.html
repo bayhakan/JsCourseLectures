@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+       const dizi = [
+        {
+          sehir: "İstanbul",
+          nufus: 20000000,
+        },
+        {
+          sehir: "İzmir",
+          nufus: 10000000,
+        },
+        {
+          sehir: "Ankara",
+          nufus: 15000000,
+        },
+        {
+          sehir: "Sivas",
+          nufus: 3000000,
+        },
+      ];
+
+      const yeniDizi = dizi.map( (item) =>{
+       if(item.nufus>10000000){
+        item.nufus *= 1.1;
+    }
+    return item;   
+      });
+      console.log(yeniDizi);
+    </script>
+</body>
+</html>

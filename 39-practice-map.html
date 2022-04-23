@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const tlFiyatlar = [100, 150, 100, 50, 80, 562, 10, 32];
+        
+        // Çok satırlı versiyon
+        const yeniFiyatlar = tlFiyatlar.map(fiyat => {
+            if(fiyat>100){
+                return (fiyat*1.10).toFixed(2);
+            }
+            else{
+                return (fiyat*1.15).toFixed(2);
+            }
+        });
+        // Tek satırlı versiyon
+        const yeniFiyatlar2 = tlFiyatlar.map(fiyat => fiyat>100 ? (fiyat*1.10).toFixed(2) : (fiyat*1.15).toFixed(2));
+       
+        console.log(tlFiyatlar);
+        console.log(yeniFiyatlar);
+        console.log(yeniFiyatlar2);
+    </script>
+</body>
+</html>

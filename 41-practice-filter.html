@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        #tblCountries tbody tr{
+            cursor: pointer;
+        }
+        #tblCountries tbody tr:hover{
+            background-color: rgb(219, 183, 253);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="countryDetail" class="card sticky-top">
+            
+        </div>
+        <table id="tblCountries" class="table">
+            <thead>
+                <tr>
+                    <th>Kod</th>
+                    <th>Ülke Adı</th>
+                    <th>Yüzölçümü</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th class="totalArea"></th>
+                    <th></th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    
+    <script type="module" src="assets/js/41-practise-filter.js"></script>
+</body>
+</html>
