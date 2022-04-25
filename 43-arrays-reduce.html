@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const koordinatlar = [100, 150, 32, 43, 20];
+        const sontoplam = koordinatlar.reduce( (toplam, koord) => {
+            console.log(`toplam=${toplam} koord=${koord}`);
+            return toplam + koord;
+            
+        },0 );
+        console.log(`Son tplam=${sontoplam}`);
+        const soncarpim = koordinatlar.reduce( (carpim, koord) => {
+            console.log(`çarpım=${carpim} koord=${koord}`);
+            return carpim * koord;
+            
+        },1);
+        console.log(`Son çarpım=${soncarpim}`);
+
+
+        const maaslar = [12,15,8,20,25,14,12,10,7,10];
+        const toplamMaas = maaslar.filter(m=>m<=15).map(m=>m*1.2).reduce((toplam, m) => toplam+m,0);
+        console.log(toplamMaas);
+        </script>
+</body>
+</html>
