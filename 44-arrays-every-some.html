@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+         const koordinatlar = [-100,150, -32, 43, -20];
+         if(koordinatlar.some(item=>item>100)){
+            console.log("En az bir eleman 100den buyuk");
+         }else{
+             console.log("Hic bir eleman 100den buyuk degil");
+         }
+         if(koordinatlar.every(item=>item<0)){
+            console.log("Tüm elemanlar negatif");
+            }else{
+            console.log("Tüm elemanlar negatif degil");
+            }
+    </script>
+</body>
+</html>
