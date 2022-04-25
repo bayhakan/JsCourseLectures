@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+           const koordinatlar = [-100, 150, -32, 43, -20];
+        console.log(koordinatlar);
+        // pipeline sız yöntem
+        const arr1 = koordinatlar.filter(k=>k<0);
+        console.log(arr1);
+        const arr2 = arr1.map(k=>Math.abs(k));
+        console.log(arr2);
+        arr2.forEach(k=> console.log(k));
+        // pipeline yöntemi
+        koordinatlar.filter(k=>k<0)
+        .map(k=>Math.abs(k))
+        .forEach(k=> console.log(k));
+    </script>
+</body>
+</html>
