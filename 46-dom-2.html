@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="liste">
+        <li>Item1
+            <span>test</span>   
+        </li>
+        <li>Item2</li>
+        <li>Item3</li>
+        <li>Item4</li>
+        <li>Item5</li>
+    </ul>
+
+
+    <script>
+        const liste = document.querySelector("#liste");
+        
+        const listeninCocuklari = liste.children;
+        console.log(listeninCocuklari);
+
+        const listeninIlkCocugu = liste.firstElementChild;
+        console.log(listeninIlkCocugu);
+
+        const listeninSOnCocugu = liste.lastElementChild;
+        console.log(listeninSOnCocugu);
+
+        const listeninParenti = liste.parentElement;
+        console.log(listeninParenti);
+
+        const s1 = document.querySelector("#s1");
+        const s1inKardesleri = s1.nextElementSibling;
+        console.log(s1inKardesleri);
+
+
+    </script>
+</body>
+</html>

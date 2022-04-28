@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue{
+            background-color: blue;
+        }
+
+        .red{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Merhaba Dünya</h1>
+
+    <button id="btn1">Add</button>
+    <button id="btn2">Remove</button>
+    <button id="btn3">Toggle</button>
+    <button id="btn4">Replace</button>
+
+    <script>
+        const h = document.querySelector("h1");
+
+        h.classList.add("blue");
+        
+        document.querySelector("#btn1").addEventListener('click', ()=>{
+            h.classList.add("blue");
+        });
+
+        document.querySelector("#btn2").addEventListener('click', ()=>{
+            h.classList.remove("blue");
+        });
+
+        document.querySelector("#btn3").addEventListener('click', ()=>{
+            h.classList.toggle("red");
+        });
+
+        document.querySelector("#btn4").addEventListener('click', ()=>{
+            if(h.classList.contains("blue")){
+                h.classList.replace("blue", "red");
+            }
+            else{
+                h.classList.replace("red", "blue");
+            }
+            
+            
+
+        });
+        
+    </script>
+</body>
+</html>
