@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul id="liste">
+        <li>Ali</li>
+        <li>Veli</li>
+        <li>Ayşe</li>
+    </ul>
+
+    <script>
+        const li1 = document.createElement("li");
+        li1.innerText = "Fatma";
+        li1.setAttribute("class","bg-danger");
+
+        const li2 = document.createElement("li");
+        li2.innerText = "Sevgi";
+        li2.setAttribute("class","bg-danger");
+
+        //document.querySelector("#liste").appendChild(li);
+        document.querySelector("#liste").append(li1);
+        document.querySelector("#liste").prepend(li2);
+        document.querySelector("#liste li:nth-child(3)").remove();
+        
+        
+    </script>
+</body>
+</html>
