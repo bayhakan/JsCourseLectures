@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function topla(...sayilar){
+            return sayilar.reduce( (toplam, sayi)=> toplam+sayi,0 );
+            
+        }
+        function ortalama(ad, soyad, ...notlar){
+            let ort = notlar.reduce( (toplam, not)=> toplam+not,0 );
+            ort=ort/notlar.length;
+            return `${ad} ${soyad} için ortalama:${ort}`;
+        }
+        console.log(topla(5,8));
+        console.log(topla(15,8,78,9,11));
+        console.log(ortalama("Ali","Gel",12,45,23,78,89));
+        console.log(ortalama("Ayşe","Koş",56,76));
+    </script>
+</body>
+</html>

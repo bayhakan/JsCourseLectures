@@ -1,0 +1,70 @@
+/*GENEL*/
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/*MAIN SAYFAMİZ*/
+
+section.main {
+  background: url("../img/okul/picture5.jpg") center/cover no-repeat;
+  border: 3px solid black;
+}
+
+div.main {
+  background-color: aliceblue;
+  padding: 1 rem;
+}
+
+div.main a {
+  padding: 30px;
+}
+article.main {
+  text-align: center;
+}
+
+form.main {
+  background-color: darkgrey;
+  width: min-content;
+}
+article.main ol {
+  background-color: gray;
+  width: min-content;
+}
+/*TEACHER SAYFAMİZ*/
+
+body.teacher {
+  background: url("../img/okul/picture6.jpg") center/cover no-repeat;
+}
+section.teacher {
+  width: min-content;
+  background-color: bisque;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+/*STUDENT SAYFAMİZ*/
+body.student {
+  background: url("../img/okul/picture3.jpg") center/cover no-repeat;
+}
+section.student {
+  width: min-content;
+  background-color: bisque;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+/*PARENT SAYFAMİZ*/
+body.parent {
+  background: url("../img/okul/picture4.jpg") center/cover no-repeat;
+}
+section.parent {
+  width: min-content;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  color:black;
+}

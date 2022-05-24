@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript ile Girilen Bir Kelimenin Palindrom Olup Olmadigini Bulan Program</title>
+</head>
+<body>
+    
+ 
+    <script>
+        
+        let sayi = prompt("Bir sayı giriniz.");
+        let terssayi = "";
+ 
+        for(let i = sayi.length-1; i >= 0; i--){
+            terssayi = terssayi + sayi.charAt(i);
+        }
+ 
+        if(terssayi === sayi){
+            alert(`"${sayi}" palindrom bir sayidir!`)
+        } else{
+            alert(`"${sayi}" palindrom bir sayi değildir!`)
+        }
+ 
+    </script>
+</body>
+</html>

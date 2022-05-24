@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const hesapla = (a,b, cb) => {
+          
+        setTimeout(()=> {
+            let s = a+b;
+            cb(s);
+        }, 200);
+
+      };
+
+
+
+      //senkron çalışma
+      console.log("Merhaba1");
+      console.log("Merhaba2");
+      console.log("Merhaba3");
+
+      //asenkron çalışma
+      console.log("Dünya1");
+      const sonuc = hesapla(12,45, (data)=> {
+        console.log(data);
+      });
+
+      console.log(sonuc);
+      console.log("Dünya3");
+    </script>
+  </body>
+</html>

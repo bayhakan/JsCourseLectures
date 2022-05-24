@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function topla(s1,s2,s3){
+            console.log(s1,s2,s3);
+            return s1+s2+s3;
+        }
+
+        const sayilar = [14,54,65,23,2356];
+
+        // Klasik yöntem
+        //const sonuc = topla(sayilar[0], sayilar[1], sayilar[2]);
+
+        const sonuc = topla(...sayilar);
+        console.log(sonuc);
+
+
+        const dizi = [13,45,67,23,76];
+        const dizi2 = [12,65,88];
+        const sabit = 12;
+
+        const yeniDizi = [78, ...dizi, sabit, ...dizi2];
+        console.log(yeniDizi);
+
+
+        // Ram de A2
+        const student = {
+            no: 1234,
+            adi: 'Ali',
+            soyadi: 'Gel',
+            dogumYeri: 'İzmir'
+        };
+
+        // Ramde A3 adresinde
+        const sayi = 5;
+
+        // Ramde A5 adresinde 5 değeri saklıyor.
+        const yeniSayi = sayi;
+
+        // Ramde A10 adresinde A2 değerini saklıyor
+        const newStudent = student;
+        newStudent.adi = "Mehmet";
+    
+        // shallow copy
+        const newerStudent = {...student, dogumTarihi:"10.10.1980",no:5432};
+        newerStudent.adi = "Veli";
+
+        console.log(student);
+        console.log(newStudent);
+        console.log(newerStudent);
+
+
+
+
+    </script>
+</body>
+</html>
